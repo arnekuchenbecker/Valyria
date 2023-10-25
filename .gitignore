@@ -352,7 +352,7 @@ MigrationBackup/
 .ionide/
 
 # Libraries
-vendor/
+**/vendor/
 
 # Cmake stuff
 **/cmake_install.cmake
