@@ -1,4 +1,4 @@
-workspace "Dawn"
+workspace "Valyria"
 	architecture "x64"
 	
 	configurations
@@ -12,6 +12,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to solution directory
 IncludeDir = {}
+IncludeDir["spdlog"] = "Dawn/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Dawn/vendor/GLFW/include"
 IncludeDir["Glad"] = "Dawn/vendor/Glad/include"
 IncludeDir["ImGui"] = "Dawn/vendor/ImGui"
@@ -27,6 +28,7 @@ project "Dawn"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
+	uuid "76e51f1b-0819-4af0-9d76-674c73c453a6"
 	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -44,8 +46,8 @@ project "Dawn"
 	
 	includedirs
 	{
---		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
+		"%{IncludeDir.spdlog}",
 --		"%{IncludeDir.GLFW}",
 --		"%{IncludeDir.Glad}",
 --		"%{IncludeDir.ImGui}",

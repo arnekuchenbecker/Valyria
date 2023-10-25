@@ -1,6 +1,8 @@
 #pragma once
 
-#include "Dawn/Events/Event.h"
+#include "Dawn/Core.h"
+
+#include "Dawn/Window.h"
 #include "Dawn/Events/WindowCloseEvent.h"
 
 namespace Dawn {
@@ -15,8 +17,8 @@ namespace Dawn {
 
 		void onEvent(Event& e);
 
-		void pushLayer(Layer* layer);
-		void pushOverlay(Layer* overlay);
+		//void pushLayer(Layer* layer);
+		//void pushOverlay(Layer* overlay);
 
 		inline Window& getWindow() { return *window; }
 
@@ -25,9 +27,9 @@ namespace Dawn {
 		bool onWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> window;
-		ImGuiLayer* imGuiLayer;
+		//ImGuiLayer* imGuiLayer;
 		bool running = true;
-		LayerStack layerStack;
+		//LayerStack layerStack;
 
 		static Application* instance;
 	};

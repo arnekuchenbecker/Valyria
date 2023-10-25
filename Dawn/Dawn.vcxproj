@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E0227F3E-93CB-4203-A621-834E68BD2682}</ProjectGuid>
+    <ProjectGuid>{76E51F1B-0819-4AF0-9D76-674C73C453A6}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Dawn</RootNamespace>
@@ -78,7 +78,7 @@
       <PrecompiledHeaderFile>dwpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DW_PLATFORM_WINDOWS;DW_BUILD_DLL;GLFW_INCLUDE_NONE;IMGUI_IMPL_OPENGL_LOADER_GLAD;DW_DEBUG;DW_ENABLE_ASSERTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -96,7 +96,7 @@
       <PrecompiledHeaderFile>dwpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DW_PLATFORM_WINDOWS;DW_BUILD_DLL;GLFW_INCLUDE_NONE;IMGUI_IMPL_OPENGL_LOADER_GLAD;DW_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -118,7 +118,7 @@
       <PrecompiledHeaderFile>dwpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DW_PLATFORM_WINDOWS;DW_BUILD_DLL;GLFW_INCLUDE_NONE;IMGUI_IMPL_OPENGL_LOADER_GLAD;DW_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -135,8 +135,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Dawn.h" />
     <ClInclude Include="src\Dawn\Application.h" />
     <ClInclude Include="src\Dawn\Core.h" />
+    <ClInclude Include="src\Dawn\EntryPoint.h" />
     <ClInclude Include="src\Dawn\Events\AppRenderEvent.h" />
     <ClInclude Include="src\Dawn\Events\AppTickEvent.h" />
     <ClInclude Include="src\Dawn\Events\AppUpdateEvent.h" />
@@ -156,13 +158,24 @@
     <ClInclude Include="src\Dawn\Events\WindowLostFocusEvent.h" />
     <ClInclude Include="src\Dawn\Events\WindowMovedEvent.h" />
     <ClInclude Include="src\Dawn\Events\WindowResizeEvent.h" />
+    <ClInclude Include="src\Dawn\Layer.h" />
+    <ClInclude Include="src\Dawn\Layerstack.h" />
+    <ClInclude Include="src\Dawn\Log.h" />
+    <ClInclude Include="src\Dawn\Window.h" />
     <ClInclude Include="src\dwpch.h" />
+    <ClInclude Include="vendor\spdlog\tests\catch.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Dawn\Application.cpp" />
+    <ClCompile Include="src\Dawn\Layer.cpp" />
+    <ClCompile Include="src\Dawn\Layerstack.cpp" />
+    <ClCompile Include="src\Dawn\Log.cpp" />
     <ClCompile Include="src\dwpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

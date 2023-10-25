@@ -1,83 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Dawn">
-      <UniqueIdentifier>{AF05847C-9B3C-850D-4429-6B10303F010F}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Dawn\Events">
-      <UniqueIdentifier>{B396A255-1F4C-1B4B-A840-152214F5114F}</UniqueIdentifier>
+    <Filter Include="src\Dawn">
+      <UniqueIdentifier>{26251DCF-12F2-77DA-3B0B-66822737AD68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Dawn\Events">
+      <UniqueIdentifier>{4ACA7C6D-B655-EA31-BF66-6D262B714632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor">
+      <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\spdlog">
+      <UniqueIdentifier>{8BBC5F22-F77C-DB58-C0B7-24D62C372035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\spdlog\tests">
+      <UniqueIdentifier>{ADA32A34-1905-0842-A272-4EF40ED33E01}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Dawn.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\Dawn\Application.h">
-      <Filter>Dawn</Filter>
+      <Filter>src\Dawn</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Core.h">
-      <Filter>Dawn</Filter>
+      <Filter>src\Dawn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dawn\EntryPoint.h">
+      <Filter>src\Dawn</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\AppRenderEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\AppTickEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\AppUpdateEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\Event.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\EventDispatcher.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\KeyEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\KeyPressedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\KeyReleasedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\KeyTypedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\MouseButtonEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\MouseButtonPressedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\MouseButtonReleasedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\MouseMovedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\MouseScrolledEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\WindowCloseEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\WindowFocusEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\WindowLostFocusEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\WindowMovedEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Dawn\Events\WindowResizeEvent.h">
-      <Filter>Dawn\Events</Filter>
+      <Filter>src\Dawn\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\dwpch.h" />
+    <ClInclude Include="src\Dawn\Layer.h">
+      <Filter>src\Dawn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dawn\Layerstack.h">
+      <Filter>src\Dawn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dawn\Log.h">
+      <Filter>src\Dawn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Dawn\Window.h">
+      <Filter>src\Dawn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dwpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\spdlog\tests\catch.hpp">
+      <Filter>vendor\spdlog\tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Dawn\Application.cpp">
-      <Filter>Dawn</Filter>
+      <Filter>src\Dawn</Filter>
     </ClCompile>
-    <ClCompile Include="src\dwpch.cpp" />
+    <ClCompile Include="src\Dawn\Layer.cpp">
+      <Filter>src\Dawn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dawn\Layerstack.cpp">
+      <Filter>src\Dawn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Dawn\Log.cpp">
+      <Filter>src\Dawn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dwpch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
 </Project>

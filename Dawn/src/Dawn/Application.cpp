@@ -1,4 +1,7 @@
+#include "dwpch.h"
+
 #include "Application.h"
+#include "Dawn/Events/EventDispatcher.h"
 
 namespace Dawn {
 	
@@ -6,7 +9,10 @@ namespace Dawn {
 
 	Application::Application()
 	{
+		DW_CORE_ASSERT(!instance, "Application already exists!");
 		instance = this;
+
+		window = std::unique_ptr<Window>(Window::createWindow());
 	}
 
 	Application::~Application()

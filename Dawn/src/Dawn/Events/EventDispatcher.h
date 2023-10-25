@@ -6,8 +6,8 @@ namespace Dawn {
 	
 	class EventDispatcher
 	{
-		template<typename T>
-		using EventFn = std::function<bool(T&)>;
+		template<typename CellType>
+		using EventFn = std::function<bool(CellType&)>;
 
 	public:
 		EventDispatcher(Event& event)
@@ -15,12 +15,12 @@ namespace Dawn {
 		{
 		}
 
-		template<typename T>
-		bool dispatch(EventFn<T> func)
+		template<typename CellType>
+		bool dispatch(EventFn<CellType> func)
 		{
-			if (event.getEventType() == T::getStaticType())
+			if (event.getEventType() == CellType::getStaticType())
 			{
-				event.handled = func(*(T*)&event);
+				event.handled = func(*(CellType*)&event);
 				return true;
 			}
 			return false;

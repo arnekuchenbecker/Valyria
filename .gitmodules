@@ -1,0 +1,6 @@
+[submodule "Dawn/vendor/spdlog"]
+	path = Dawn/vendor/spdlog
+	url = https://github.com/arnekuchenbecker/spdlog
+[submodule "Dawn/vendor/Catch2"]
+	path = Dawn/vendor/Catch2
+	url = https://github.com/arnekuchenbecker/Catch2

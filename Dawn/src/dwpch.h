@@ -12,7 +12,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-//#include "Dawn/Log.h"
+#include "Dawn/Log.h"
 
 #ifdef DW_PLATFORM_WINDOWS
 	#include <Windows.h>
